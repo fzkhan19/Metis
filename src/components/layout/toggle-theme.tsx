@@ -12,7 +12,10 @@ export const ToggleTheme = () => {
 			className=" justify-start"
 			size="sm"
 			variant="ghost"
-			onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+			onClick={() => {
+				window.location.reload();
+				setTheme(theme === "light" ? "dark" : "light");
+			}}
 		>
 			<div className="flex gap-2 dark:hidden">
 				<Moon className="size-5" />
